@@ -75,10 +75,41 @@ public class MyData {
         for (int i = 0; i < size - 1; i++) {
             for (int j = 0; j < size - 1; j++) {
                 if (data[j] > data[j + 1]) {
-                    swap(j , j + 1);
+                    swap(j, j + 1);
                 }
             }
         }
+    }
+
+    public void quickSort(int first, int last) {
+        // ? Anchor is when there is only one item
+        if (first >= last) {
+            return;
+        }
+
+        int pivotIndex = first;
+        int left = first + 1;
+        int right = last;
+
+        while (left <= right) {
+            // ? Left search for a number that is bigger than pivot
+            while (left <= last && data[left] < data[pivotIndex]) {
+                left++;
+            }
+            // ? Right search for a number that is lower than pivot
+            while (right >= first && data[right] > data[pivotIndex]) {
+                right--;
+            }
+
+            if (left < right) {
+                swap(left, right);
+                left++;
+                right--;
+            }
+        }
+        swap(pivotIndex, right);
+        quickSort(first, right - 1);
+        quickSort(right + 1, last);
     }
 
 }
