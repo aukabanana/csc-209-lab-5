@@ -26,7 +26,7 @@ public class MyData {
         System.out.println(s);
     }
 
-    public void clone (MyData d) {
+    public void clone(MyData d) {
         for (int i = 0; i < size; i++) {
             d.add(data[i]);
         }
@@ -42,11 +42,23 @@ public class MyData {
         for (int i = 0; i < size - 1; i++) {
             int smallestIndex = i;
             for (int j = i + 1; j < size; j++) {
-                if(data[j] < data[smallestIndex]) {
+                if (data[j] < data[smallestIndex]) {
                     smallestIndex = j;
                 }
             }
             swap(i, smallestIndex);
         }
     }
+
+    public void insertionSort() {
+        for (int i = 1; i < size; i++) {
+            int insertedData = data[i];
+            int j;
+            for (j = i - 1; j >= 0 && data[j] > insertedData; j--) {
+                data[j + 1] = data[j];
+            }
+            data[j + 1] = insertedData;
+        }
+    }
+
 }

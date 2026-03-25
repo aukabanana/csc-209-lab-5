@@ -22,9 +22,15 @@ public class SortingLab {
 
         MyData d2 = new MyData(60);
         d1.clone(d2);
-        d2.selectionSort();
         System.out.print("Selection Sort: ");
+        d2.selectionSort();
         d2.printAll();
+
+        MyData d3 = new MyData(60);
+        d1.clone(d3);
+        System.out.print("Insertion Sort: ");
+        d3.insertionSort();
+        d3.printAll();
 
     }
 }
