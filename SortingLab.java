@@ -17,10 +17,14 @@ public class SortingLab {
         d1.add(70);
         d1.add(333);
         d1.add(111);
+        System.out.print("Original: ");
         d1.printAll();
 
+        MyData d2 = new MyData(60);
+        d1.clone(d2);
+        d2.selectionSort();
         System.out.print("Selection Sort: ");
-        d1.selectionSort();
-        d1.printAll();
+        d2.printAll();
+
     }
 }

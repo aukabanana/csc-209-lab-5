@@ -26,6 +26,12 @@ public class MyData {
         System.out.println(s);
     }
 
+    public void clone (MyData d) {
+        for (int i = 0; i < size; i++) {
+            d.add(data[i]);
+        }
+    }
+
     public void swap(int indexI, int indexJ) {
         int temp = data[indexI];
         data[indexI] = data[indexJ];
