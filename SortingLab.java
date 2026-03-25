@@ -18,5 +18,9 @@ public class SortingLab {
         d1.add(333);
         d1.add(111);
         d1.printAll();
+
+        System.out.print("Selection Sort: ");
+        d1.selectionSort();
+        d1.printAll();
     }
 }
