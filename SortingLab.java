@@ -31,13 +31,13 @@ public class SortingLab {
         System.out.print("Insertion Sort:     ");
         d3.insertionSort();
         d3.printAll();
-        
+
         MyData d4 = new MyData(60);
         d1.clone(d4);
         System.out.print("Bubble Sort (L-H):  ");
         d4.bubbleSortLowToHigh();
         d4.printAll();
-        
+
         MyData d5 = new MyData(60);
         d1.clone(d5);
         System.out.print("Bubble Sort (H-L):  ");

@@ -73,9 +73,9 @@ public class MyData {
 
     public void bubbleSortHighToLow() {
         for (int i = 0; i < size - 1; i++) {
-            for (int j = size - 1; j > i; j--) {
-                if (data[j] > data[j - 1]) {
-                    swap(j, j - 1);
+            for (int j = 0; j < size - 1; j++) {
+                if (data[j] > data[j + 1]) {
+                    swap(j , j + 1);
                 }
             }
         }
