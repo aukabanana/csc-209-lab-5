@@ -22,15 +22,27 @@ public class SortingLab {
 
         MyData d2 = new MyData(60);
         d1.clone(d2);
-        System.out.print("Selection Sort: ");
+        System.out.print("Selection Sort:     ");
         d2.selectionSort();
         d2.printAll();
 
         MyData d3 = new MyData(60);
         d1.clone(d3);
-        System.out.print("Insertion Sort: ");
+        System.out.print("Insertion Sort:     ");
         d3.insertionSort();
         d3.printAll();
+        
+        MyData d4 = new MyData(60);
+        d1.clone(d4);
+        System.out.print("Bubble Sort (L-H):  ");
+        d4.bubbleSortLowToHigh();
+        d4.printAll();
+        
+        MyData d5 = new MyData(60);
+        d1.clone(d5);
+        System.out.print("Bubble Sort (H-L):  ");
+        d5.bubbleSortHighToLow();
+        d5.printAll();
 
     }
 }
