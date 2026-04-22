@@ -76,7 +76,7 @@ public class SortingLab {
         d8.radixSort();
         d8.printAll();
 
-        System.out.println("Ratchapol Toopthong");
-        System.out.println("68130500822");
+        System.out.println("Name : Ratchapol Toopthong");
+        System.out.println("ID   : 68130500822");
     }
 }
