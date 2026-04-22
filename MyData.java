@@ -112,4 +112,49 @@ public class MyData {
         quickSort(right + 1, last);
     }
 
+    public void mergeSort(int first, int last) {
+        if (first < last) {
+            int mid = (first + last) / 2;
+            mergeSort(first, mid);
+            mergeSort(mid + 1, last);
+            merge(first, last);
+        }
+    }
+
+    public void merge(int first, int last) {
+        int[] result = new int[last - first + 1];
+        int mid = (first + last) / 2;
+        int iResult = 0;
+        int left = first;
+        int right = mid + 1;
+
+        while (left <= mid && right <= last) {
+            if (data[left] < data[right]) {
+                result[iResult] = data[left];
+                iResult++;
+                left++;
+            } else {
+                result[iResult] = data[right];
+                iResult++;
+                right++;
+            }
+        }
+
+        while (left <= mid) {
+            result[iResult] = data[left];
+            iResult++;
+            left++;
+        }
+
+        while (right <= last) {
+            result[iResult] = data[right];
+            iResult++;
+            right++;
+        }
+
+        for (iResult = 0; iResult < last - first + 1; iResult++) {
+            data[first + iResult] = result[iResult];
+        }
+    }
+
 }
