@@ -1,3 +1,6 @@
+
+import java.time.YearMonth;
+
 public class MyData {
     int[] data;
     int size;
@@ -154,6 +157,30 @@ public class MyData {
 
         for (iResult = 0; iResult < last - first + 1; iResult++) {
             data[first + iResult] = result[iResult];
+        }
+    }
+
+    public void radixSort() {
+        int radix = 10;
+        int digits = 5;
+
+        ourQueue[] q = new ourQueue[10];
+
+        for (int i = 0; i < radix; i++) {
+            q[i] = new ourQueue(30);
+        }
+        int factor = 1;
+        for (int pass = 1; pass <= digits; factor *= radix, pass++) {
+            for (int datai = 0; datai < size; datai++) {
+                q[(data[datai] / factor) % radix].enqueue(data[datai]);
+            }
+
+            int datai = 0;
+            for (int i = 0; i < radix; i++) {
+                while (!q[i].isEmpty()) {
+                    data[datai++] = q[i].dequeue();
+                }
+            }
         }
     }
 

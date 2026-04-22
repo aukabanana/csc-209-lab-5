@@ -4,19 +4,32 @@ public class SortingLab {
         d1.add(60);
         d1.add(400);
         d1.add(93);
+        d1.add(9);
         d1.add(200);
-        d1.add(20);
-        d1.add(40);
-        d1.add(32);
+        
+        d1.add(204);
+        d1.add(43530);
+        d1.add(4530);
+        d1.add(7632);
         d1.add(21);
+        
         d1.add(33);
         d1.add(500);
         d1.add(903);
         d1.add(2);
         d1.add(66);
+        
         d1.add(70);
         d1.add(333);
         d1.add(111);
+        d1.add(22222);
+        d1.add(34);
+        
+        d1.add(71234);
+        d1.add(54321);
+        d1.add(87653);
+        d1.add(72);
+        d1.add(21);
 
         System.out.print("Original:           ");
         d1.printAll();
@@ -57,5 +70,13 @@ public class SortingLab {
         d7.mergeSort(0, d7.size - 1);
         d7.printAll();
 
+        MyData d8 = new MyData(60);
+        d1.clone(d8);
+        System.out.print("Radix Sort:         ");
+        d8.radixSort();
+        d8.printAll();
+
+        System.out.println("Ratchapol Toopthong");
+        System.out.println("68130500822");
     }
 }
